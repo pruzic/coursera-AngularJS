@@ -1,0 +1,24 @@
+<!-- <div class="col-md-12"> -->
+
+  <table class="col-md-12 table-striped">
+    <thead ng-if="narrowDown.tableHeaderShow()">
+    <tr>
+      <th>Name</th>
+      <th>Short Name</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in narrowDown.found">
+      <td>{{item.name}}</td>
+      <td>{{item.short_name}}</td>
+      <td>{{item.description}}</td>
+      <td style="text-align: right;"><button ng-click="narrowDown.onRemove({index: $index});">Don't want this one!</button></td>
+    </tr>
+    <tr>
+      <td colspan="4" class="error" ng-if="narrowDown.foundMenuList()">Nothing found</td>
+    </tr>
+  </tbody>
+</table>
+<!-- </div> -->
